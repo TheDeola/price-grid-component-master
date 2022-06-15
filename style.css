@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* CSS Variables */ 
+
+/* Mobile First Design */
+
+:root {
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --color: white;
+    --fontsize: 16px;
+    --font-family: 'Karla', sans-serif;
+    --padding: 15px;
+    --padding-left: 25px;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(218, 22%, 67%);
+    font-size: var(--fontsize);
+    font-family: var(--font-family);
+}
+main {
+    margin: 50px auto;
+    width: 360px;
+    max-width: 768px;
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: 1.8fr 1.5fr 1.5fr;
+}
+.grid-box1-title {
+    color:var(--Cyan);
+}
+.grid-box1-subtitle {
+    color:var(--BrightYellow);
+    font-weight: normal;
+}
+.grid-box1 p {
+    color: var(--GrayishBlue);
+    line-height: 25px;
+}
+.grid-box1 {
+    background-color: white;
+    padding: var(--padding);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: var(--padding-left);
+}
+.grid-box2 .span {
+    font-size: small;
+    font-weight: lighter;
+    color:var(--LightGray);
+}
+.grid-box2 h1 {
+    font-size: xx-large;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+.grid-box2 button {
+    padding: 15px;
+    width: 300px;
+    background-color: var(--BrightYellow);
+    border: .5px solid var(--BrightYellow);
+    border-radius: 5px;
+    color: var(--color);
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.grid-box2 {
+    background-color: var(--Cyan);
+    padding: var(--padding);
+    color:var(--LightGray);
+    padding-left: var(--padding-left);
+}
+.grid-box3 {
+    background-color: rgb(87, 195, 195);
+    padding: var(--padding);
+    color:var(--LightGray);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: var(--padding-left);
+}
+.grid-box3 li {
+    list-style-type: none;
+    margin-left: -35px;
+    color: var(--LightGray);
+    font-size: small;
+    line-height: 20px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--color);
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+/* Desktop Responsiveness */
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 100px auto;
+        width: 900px;
+    }
+    .grid-container {
+        display: grid;
+        height: auto;
+        grid-template-areas: "grid-box1 grid-box1"
+                             "grid-box2 grid-box3"  
+                             "footer footer";
+        grid-template-rows: 200px .3fr .3fr;
+        grid-template-columns:.5fr .5fr;
+    }
+    .grid-box {
+        padding-left: 60px;
+    }
+    .grid-container > .grid-box1 {
+        grid-area: grid-box1;
+        padding: 20px 60px;
+        padding-right: 100px;
+    }
+    .grid-container > .grid-box2 {
+        grid-area: grid-box2;
+    }
+    .grid-container > .grid-box3 {
+        grid-area: grid-box3;
+    }
+    .grid-box2 {
+        border-bottom-left-radius: 10px;
+    }
+    .grid-box3 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+    .grid-box2 button {
+        padding: 15px;
+        width: 250px;
+    }
+}
