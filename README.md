@@ -47,7 +47,7 @@ Users should be able to:
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas) - This helped me better understand grid-row fractions and grid area styles. 
 - [W3schools](https://www.w3schools.com/) 
--[AltschoolAfrica](https://thealtschool.com/topic/grid/)
+- [AltschoolAfrica](https://thealtschool.com/topic/grid/)
 
 ## Author
 
